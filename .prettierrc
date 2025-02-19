@@ -1,0 +1,16 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "printWidth": 100,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "importOrderSeparation": true,
+  "importOrderCaseInsensitive": true,
+  "importOrderSortSpecifiers": true
+}
