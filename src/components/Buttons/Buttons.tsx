@@ -1,13 +1,21 @@
-const Users = () => {
+import React from "react";
+
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
+}
+
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <div>
-      <h1>Users</h1>
-      <ul>
-        <li>name 1</li>
-        <li>name 2</li>
-      </ul>
-    </div>
+    <button
+      style={{
+        padding: "8px 16px",
+        fontSize: "16px",
+      }}
+      onClick={onClick}>
+      {label}
+    </button>
   );
 };
 
-export default Users;
+export default Button;
