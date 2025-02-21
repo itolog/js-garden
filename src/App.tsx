@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
 
-import viteLogo from "/vite.svg";
 import { sortingOddWithoutEven } from "./tasks/sortingOddWithoutEven.ts";
 
 function App() {
@@ -14,11 +13,6 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
       <h1>Vite + React</h1>
     </>
   );
