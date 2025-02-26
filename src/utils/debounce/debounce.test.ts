@@ -40,4 +40,21 @@ describe("debounce", () => {
     jest.advanceTimersByTime(500);
     expect(fn).toHaveBeenCalledWith("Hello", 123);
   });
+
+  it("should preserve the context of the function", () => {
+    const obj = {
+      value: 42,
+      fn(this: any) {
+        return this.value;
+      },
+    };
+
+    const spy = jest.spyOn(obj, "fn");
+    const debouncedFn = debounce(obj.fn, 500);
+
+    debouncedFn.call(obj);
+    jest.advanceTimersByTime(500);
+
+    expect(spy).toHaveReturnedWith(42);
+  });
 });
